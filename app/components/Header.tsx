@@ -45,6 +45,7 @@ const Header = () => {
             <Image
               src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9aada8cd-4d16-4935-b338-93b905a1dc0c_800w.png" 
               alt="Prague Walker Logo"
+              // just some values the classes should handle that
               width={150}
               height={150}
               className="h-13.75 md:h-17.5 w-auto"
