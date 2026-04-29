@@ -101,7 +101,7 @@ const Faq = () => {
                 </h3>
                 <Link href="#contact"
                    className="inline-flex items-center gap-2 text-white font-semibold text-[10px] md:text-sm uppercase tracking-widest hover:text-[#E8501C] transition-colors mt-2">
-                  Contact our team <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                  Contact our team <Icon icon="solar:arrow-right-linear" width="20"></Icon>
                 </Link>
               </div>
             </div>
