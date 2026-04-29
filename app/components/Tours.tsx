@@ -81,7 +81,7 @@ const Tours = () => {
               />
             </div>
             <h3 className="text-2xl font-semibold text-[#0A0A0A] tracking-tight mb-3 group-hover:text-[#E8501C] transition-colors">Ten Centuries of Architecture</h3>
-            <p className="md:text-base leading-relaxed flex-grow text-sm font-normal text-gray-600 mb-8">This captivating architectural journey spans from the Romanesque foundations and Gothic spires of the medieval era to the ornate Baroque palaces, elegant Art Nouveau facades, and cutting-edge contemporary designs that define the city's unique urban landscape.</p>
+            <p className="md:text-base leading-relaxed flex-grow text-sm font-normal text-gray-600 mb-8">This captivating architectural journey spans from the Romanesque foundations and Gothic spires of the medieval era to the ornate Baroque palaces, elegant Art Nouveau facades, and cutting-edge contemporary designs that define the city&apos;s unique urban landscape.</p>
             <div className="flex items-center justify-between border-t border-gray-200 pt-6 mb-8">
               <div>
                 <span className="block text-[10px] md:text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Duration</span>

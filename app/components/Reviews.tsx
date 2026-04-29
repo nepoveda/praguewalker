@@ -1,6 +1,14 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from 'react';
 
-const reviewsData = [
+type Review = {
+  name: string;
+  loc: string;
+  text: string;
+};
+
+const reviewsData: Review[] = [
   { name: "Eleanor & James", loc: "London, UK", text: "\"An absolute revelation. We thought we knew Prague, but our guide unlocked a completely different city. The historical depth combined with such a relaxed, friendly pace made this the highlight of our European trip.\"" },
   { name: "The Mitchell Family", loc: "Toronto, Canada", text: "\"Having a private academic guide meant we could ask highly specific questions about the Velvet Revolution. It felt less like a tour and more like walking through history with an extremely knowledgeable friend.\"" },
   { name: "Marcus & Sophia", loc: "Sydney, Australia", text: "\"From the seamless hotel pick-up to the magnificent hidden cafes they showed us, every detail was perfect. If you value your time and want a truly premium experience, this is the only way to see Prague.\"" },
@@ -13,7 +21,11 @@ const reviewsData = [
   { name: "The Dubois Family", loc: "Paris, France", text: "\"Worth every penny. The privacy and exclusivity transformed our short stay in Prague into an unforgettable cultural deep-dive. Highly recommended.\"" }
 ];
 
-const ReviewCard = ({ review }) => (
+type ReviewCardProps = {
+  review: Review;
+};
+
+const ReviewCard = ({ review }: ReviewCardProps) => (
   <div className="w-[85vw] sm:w-[380px] md:w-[420px] flex-shrink-0 bg-[#FBF9F6] p-8 sm:p-10 rounded-3xl shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group/card hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
     <iconify-icon icon="solar:quote-right-bold" width="100" class="text-[#6B1524] opacity-[0.03] absolute -top-4 -right-4 group-hover/card:scale-110 transition-transform duration-500"></iconify-icon>
     <div className="flex text-[#E8501C] gap-1 mb-6 sm:mb-8 relative z-10">
@@ -32,8 +44,8 @@ const ReviewCard = ({ review }) => (
 );
 
 const Reviews = () => {
-  const sliderRef = useRef(null);
-  const track1Ref = useRef(null);
+  const sliderRef = useRef<HTMLDivElement | null>(null);
+  const track1Ref = useRef<HTMLDivElement | null>(null);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
   useEffect(() => {
@@ -42,9 +54,9 @@ const Reviews = () => {
     if (!slider || !track1) return;
 
     let isDown = false;
-    let startX;
-    let scrollLeft;
-    let animationFrameId;
+    let startX = 0;
+    let scrollLeft = 0;
+    let animationFrameId = 0;
     const scrollSpeed = 0.5;
 
     const autoScroll = () => {
@@ -63,7 +75,7 @@ const Reviews = () => {
     animationFrameId = requestAnimationFrame(autoScroll);
 
     // Mouse events
-    const handleMouseDown = (e) => {
+    const handleMouseDown = (e: MouseEvent) => {
       isDown = true;
       slider.classList.add('cursor-grabbing');
       slider.classList.remove('cursor-grab');
@@ -85,7 +97,7 @@ const Reviews = () => {
       slider.classList.add('cursor-grab');
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
@@ -134,12 +146,12 @@ const Reviews = () => {
     };
   }, [isAutoScrolling]);
 
-  const scrollByAmount = (direction) => {
+  const scrollByAmount = (direction: 'prev' | 'next') => {
     const slider = sliderRef.current;
     const track1 = track1Ref.current;
     if (!slider || !track1) return;
 
-    const card = track1.firstElementChild;
+    const card = track1.firstElementChild as HTMLElement | null;
     const gap = window.innerWidth <= 639 ? 16 : 24;
     const amount = card ? card.offsetWidth + gap : 350;
     const track1Width = track1.offsetWidth;

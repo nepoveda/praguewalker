@@ -35,11 +35,11 @@ const Hero = () => {
           </span>
         </div>
         <h1 className="reveal-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight max-w-4xl mx-auto drop-shadow-[0_4px_16px_rgba(0,0,0,0.4)] leading-[1.15]">
-          Prague isn't a destination.<br/>
-          <span className="italic bg-gradient-to-r from-[#FFB394] to-[#E8501C] bg-clip-text text-transparent">It's an invitation.</span>
+          Prague isn&apos;t a destination.<br/>
+          <span className="italic bg-gradient-to-r from-[#FFB394] to-[#E8501C] bg-clip-text text-transparent">It&apos;s an invitation.</span>
         </h1>
         <p className="reveal-up text-base sm:text-lg md:text-xl font-normal text-white/90 max-w-2xl mx-auto mt-6 sm:mt-8 drop-shadow-md leading-relaxed">
-          Experience the city's timeless beauty through private, expert-led tours designed for the curious traveler. No crowds, no scripts — just authentic stories and an intimate perspective on the City of a Hundred Spires.
+          Experience the city&apos;s timeless beauty through private, expert-led tours designed for the curious traveler. No crowds, no scripts — just authentic stories and an intimate perspective on the City of a Hundred Spires.
         </p>
         <div className="reveal-up flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-10 sm:mt-12 w-full sm:w-auto">
           <a href="#tours" className="w-full sm:w-auto h-14 px-8 sm:px-10 bg-[#E8501C] text-white text-sm font-semibold rounded-full flex items-center justify-center gap-2 hover:bg-[#c94315] transition-colors shadow-lg shadow-[#E8501C]/30 hover:shadow-[#E8501C]/50">

@@ -14,7 +14,7 @@ const Philosophy = () => {
             </h2>
             <div className="reveal-up w-20 sm:w-24 h-[2px] bg-gradient-to-r from-[#E8501C] to-transparent mt-6 mb-8 sm:mb-10 rounded-full"></div>
             <p className="reveal-up sm:text-lg leading-relaxed text-base font-normal text-gray-700 mb-6">
-              Prague is a masterpiece best enjoyed without the crowds. At Prague Walker, we believe your time in our city should be as seamless as it is inspiring. We don't just show you monuments; we offer context, local insight, and a genuine connection to Czech culture.
+              Prague is a masterpiece best enjoyed without the crowds. At Prague Walker, we believe your time in our city should be as seamless as it is inspiring. We don&apos;t just show you monuments; we offer context, local insight, and a genuine connection to Czech culture.
             </p>
             <p className="reveal-up text-base sm:text-lg text-gray-700 font-normal leading-relaxed">
               Whether you are exploring the royal history of the Castle or the hidden corners of the Old Town, you are in the hands of a local expert who treats you like a guest, not a tourist.
