@@ -1,6 +1,9 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import {Icon} from "@iconify/react";
+import Link from "next/link";
+import Image from "next/image";
 
 const faqData = [
   {
@@ -29,71 +32,82 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-16 md:py-32 border-y bg-[#FBF9F6] border-[#EBE5DF] shadow-[inset_0_1px_0_0_#FFFFFF,inset_0_-1px_0_0_#FFFFFF]" id="faq">
-      <div className="w-full max-w-[1440px] mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* FAQ Accordion */}
-          <div>
-            <div className="reveal-up text-[#E8501C] font-semibold text-xs tracking-[0.2em] uppercase mb-4">
-              Good to know
-            </div>
-            <h2 className="reveal-up text-3xl sm:text-4xl md:text-5xl font-semibold text-[#6B1524] tracking-tight">
-              Frequently Asked Questions
-            </h2>
-            <div className="reveal-up w-20 sm:w-24 h-[2px] bg-gradient-to-r from-[#E8501C] to-transparent mt-6 mb-8 md:mb-10 rounded-full"></div>
+      <section
+          className="py-16 md:py-32 border-y bg-[#FBF9F6] border-[#EBE5DF] shadow-[inset_0_1px_0_0_#FFFFFF,inset_0_-1px_0_0_#FFFFFF]"
+          id="faq">
+        <div className="w-full max-w-360 mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* FAQ Accordion */}
+            <div>
+              <div className="reveal-up text-[#E8501C] font-semibold text-xs tracking-[0.2em] uppercase mb-4">
+                Good to know
+              </div>
+              <h2 className="reveal-up text-3xl sm:text-4xl md:text-5xl font-semibold text-[#6B1524] tracking-tight">
+                Frequently Asked Questions
+              </h2>
+              <div
+                  className="reveal-up w-20 sm:w-24 h-0.5 bg-linear-to-r from-[#E8501C] to-transparent mt-6 mb-8 md:mb-10 rounded-full"></div>
 
-            <div className="flex flex-col reveal-up">
-              {faqData.map((faq, index) => {
-                const isOpen = openIndex === index;
-                return (
-                  <div key={index} className="border-b border-gray-200">
-                    <button 
-                      className="w-full py-5 md:py-6 text-left flex justify-between items-center bg-transparent group" 
-                      onClick={() => toggleFaq(index)}
-                    >
-                      <span className="text-base md:text-lg font-semibold text-[#0A0A0A] group-hover:text-[#E8501C] transition-colors pr-4">
+              <div className="flex flex-col reveal-up">
+                {faqData.map((faq, index) => {
+                  const isOpen = openIndex === index;
+                  return (
+                      <div key={index} className="border-b border-gray-200">
+                        <button
+                            className="w-full py-5 md:py-6 text-left flex justify-between items-center bg-transparent group"
+                            onClick={() => toggleFaq(index)}
+                        >
+                      <span
+                          className="text-base md:text-lg font-semibold text-[#0A0A0A] group-hover:text-[#E8501C] transition-colors pr-4">
                         {faq.question}
                       </span>
-                      <iconify-icon 
-                        icon="solar:alt-arrow-down-linear" 
-                        width="24" 
-                        height="24" 
-                        class={`text-[#E8501C] transform transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
-                      ></iconify-icon>
-                    </button>
-                    <div className={`faq-content ${isOpen ? 'open' : ''}`}>
-                      <div className="faq-inner text-sm md:text-base text-gray-600 font-normal leading-relaxed">
-                        <div className="pb-6">
-                          {faq.answer}
+                          <Icon
+                              icon="solar:alt-arrow-down-linear"
+                              width="24"
+                              height="24"
+                              className={`text-[#E8501C] transform transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                          ></Icon>
+                        </button>
+                        <div className={`faq-content ${isOpen ? 'open' : ''}`}>
+                          <div className="faq-inner text-sm md:text-base text-gray-600 font-normal leading-relaxed">
+                            <div className="pb-6">
+                              {faq.answer}
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
-          </div>
 
-          {/* Banner */}
-          <div className="reveal-up relative w-full h-full min-h-[300px] md:min-h-[400px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-[#0A0A0A] shadow-2xl mt-4 lg:mt-0 group">
-            <img 
-              src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1000&auto=format&fit=crop" 
-              alt="Prague details" 
-              className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000" 
-            />
-            <div className="bg-center bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6b3478ad-b1f0-4ef6-8994-db7941b8922c_1600w.jpg)] bg-cover absolute top-0 right-0 bottom-0 left-0"></div>
-            <div className="absolute bottom-0 left-0 p-8 md:p-10 w-full bg-gradient-to-t from-black/80 to-transparent">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white tracking-tight mb-3 md:mb-4 drop-shadow-lg">
-                Explore More.<br/>Ask Anything.
-              </h3>
-              <a href="#contact" className="inline-flex items-center gap-2 text-white font-semibold text-[10px] md:text-sm uppercase tracking-widest hover:text-[#E8501C] transition-colors mt-2">
-                Contact our team <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
-              </a>
+            {/* Banner */}
+            <div
+                className="reveal-up relative w-full h-full min-h-75 md:min-h-100 rounded-4xl md:rounded-[2.5rem] overflow-hidden bg-[#0A0A0A] shadow-2xl mt-4 lg:mt-0 group">
+              <Image
+                  src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1000&auto=format&fit=crop"
+                  alt="Prague details"
+                  // just some values the classes should handle that
+                  width={1000}
+                  height={1000}
+                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
+              />
+              <div
+                  className="bg-center bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6b3478ad-b1f0-4ef6-8994-db7941b8922c_1600w.jpg)] bg-cover absolute top-0 right-0 bottom-0 left-0"></div>
+              <div
+                  className="absolute bottom-0 left-0 p-8 md:p-10 w-full bg-linear-to-t from-black/80 to-transparent">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white tracking-tight mb-3 md:mb-4 drop-shadow-lg">
+                  Explore More.<br/>Ask Anything.
+                </h3>
+                <Link href="#contact"
+                   className="inline-flex items-center gap-2 text-white font-semibold text-[10px] md:text-sm uppercase tracking-widest hover:text-[#E8501C] transition-colors mt-2">
+                  Contact our team <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 
