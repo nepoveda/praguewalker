@@ -67,10 +67,10 @@ const reviewsData: Review[] = [
 const ReviewCard = ({review}: { review: Review }) => {
   return (
       <div
-          className="w-[85vw] sm:w-95 md:w-105 shrink-0 bg-[#FBF9F6] p-8 sm:p-10 rounded-3xl shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group/card hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+          className="w-[85vw] sm:w-95 md:w-105 shrink-0 bg-light p-8 sm:p-10 rounded-3xl shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group/card hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
         <Icon icon="solar:quote-right-bold" width="100"
-              className="text-[#6B1524] opacity-[0.03] absolute -top-4 -right-4 group-hover/card:scale-110 transition-transform duration-500"></Icon>
-        <div className="flex text-[#E8501C] gap-1 mb-6 sm:mb-8 relative z-10">
+              className="text-secondary opacity-[0.03] absolute -top-4 -right-4 group-hover/card:scale-110 transition-transform duration-500"></Icon>
+        <div className="flex text-primary gap-1 mb-6 sm:mb-8 relative z-10">
           {[1, 2, 3, 4, 5].map((star) => (
               <Icon key={star} icon="solar:star-bold" width="18"></Icon>
           ))}
@@ -79,7 +79,7 @@ const ReviewCard = ({review}: { review: Review }) => {
           {review.text}
         </p>
         <div className="mt-auto relative z-10">
-          <h4 className="font-semibold text-[#0A0A0A] text-base sm:text-lg">{review.name}</h4>
+          <h4 className="font-semibold text-dark text-base sm:text-lg">{review.name}</h4>
           <span className="text-xs sm:text-sm text-gray-500">{review.loc}</span>
         </div>
       </div>
@@ -213,17 +213,17 @@ const Reviews = () => {
   };
 
   return (
-      <section className="py-16 md:py-32 bg-[#FFFFFF]" id="reviews">
+      <section className="py-16 md:py-32 bg-white" id="reviews">
         <div className="w-full max-w-360 mx-auto overflow-hidden relative group/section">
           <div className="text-center mb-12 md:mb-16 px-6">
-            <div className="reveal-up text-[#E8501C] font-semibold text-xs tracking-[0.2em] uppercase mb-4">
+            <div className="reveal-up text-primary font-semibold text-xs tracking-widest-extra uppercase mb-4">
               Guest Stories
             </div>
-            <h2 className="reveal-up sm:text-4xl md:text-5xl text-3xl font-semibold text-[#6B1524] tracking-tight">
+            <h2 className="reveal-up sm:text-4xl md:text-5xl text-3xl font-semibold text-secondary tracking-tight">
               A Highlight of the Journey
             </h2>
             <div
-                className="reveal-up h-0.5 w-20 sm:w-24 mx-auto bg-linear-to-r from-transparent via-[#E8501C] to-transparent mt-6 rounded-full"></div>
+                className="reveal-up h-0.5 w-20 sm:w-24 mx-auto bg-linear-to-r from-transparent via-primary to-transparent mt-6 rounded-full"></div>
           </div>
 
           <div className="reveal-up w-full pt-4 pb-4 relative">
@@ -232,7 +232,7 @@ const Reviews = () => {
                 onClick={() => scrollByAmount('prev')}
                 onMouseEnter={() => setIsAutoScrolling(false)}
                 onMouseLeave={() => setIsAutoScrolling(true)}
-                className="hidden sm:flex absolute left-4 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md border border-gray-200 rounded-full items-center justify-center text-[#0A0A0A] hover:text-white hover:bg-[#E8501C] hover:border-[#E8501C] shadow-lg transition-all opacity-0 group-hover/section:opacity-100 focus:opacity-100 duration-300"
+                className="hidden sm:flex absolute left-4 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md border border-gray-200 rounded-full items-center justify-center text-dark hover:text-white hover:bg-primary hover:border-primary shadow-lg transition-all opacity-0 group-hover/section:opacity-100 focus:opacity-100 duration-300"
             >
               <Icon icon="solar:alt-arrow-left-linear" width="24"></Icon>
             </button>
@@ -240,7 +240,7 @@ const Reviews = () => {
                 onClick={() => scrollByAmount('next')}
                 onMouseEnter={() => setIsAutoScrolling(false)}
                 onMouseLeave={() => setIsAutoScrolling(true)}
-                className="hidden sm:flex absolute right-4 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md border border-gray-200 rounded-full items-center justify-center text-[#0A0A0A] hover:text-white hover:bg-[#E8501C] hover:border-[#E8501C] shadow-lg transition-all opacity-0 group-hover/section:opacity-100 focus:opacity-100 duration-300"
+                className="hidden sm:flex absolute right-4 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md border border-gray-200 rounded-full items-center justify-center text-dark hover:text-white hover:bg-primary hover:border-primary shadow-lg transition-all opacity-0 group-hover/section:opacity-100 focus:opacity-100 duration-300"
             >
               <Icon icon="solar:alt-arrow-right-linear" width="24"></Icon>
             </button>
@@ -270,23 +270,23 @@ const Reviews = () => {
             <div
                 className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 sm:px-8 py-5 sm:py-6 bg-white border border-gray-200 rounded-3xl md:rounded-full shadow-sm w-full lg:w-auto">
               <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 w-full sm:w-auto">
-                <div className="flex items-center gap-2 text-[#34E0A1]">
+                <div className="flex items-center gap-2 text-accent-green">
                   <Icon icon="simple-icons:tripadvisor" height="28" className="sm:h-8"></Icon>
-                  <span className="font-bold text-lg sm:text-xl text-[#0A0A0A] tracking-tight">Tripadvisor</span>
+                  <span className="font-bold text-lg sm:text-xl text-dark tracking-tight">Tripadvisor</span>
                 </div>
                 <div className="w-px h-10 bg-gray-200 hidden sm:block"></div>
                 <div className="flex flex-col items-center sm:items-start">
-                  <div className="flex items-center gap-1 text-[#34E0A1]">
+                  <div className="flex items-center gap-1 text-accent-green">
                     {[1, 2, 3, 4, 5].map((dot) => (
                         <Icon key={dot} icon="solar:record-circle-bold" width="14"
                               className="sm:w-4"></Icon>
                     ))}
                   </div>
-                  <span className="text-xs sm:text-sm font-bold text-[#0A0A0A] mt-0.5">5.0 Excellent</span>
+                  <span className="text-xs sm:text-sm font-bold text-dark mt-0.5">5.0 Excellent</span>
                 </div>
               </div>
               <a href="#" target="_blank" rel="noopener noreferrer"
-                 className="w-full sm:w-auto mt-2 sm:mt-0 h-10 px-6 border border-[#E8501C] text-[#E8501C] bg-transparent text-[10px] sm:text-xs font-semibold uppercase tracking-widest rounded-full flex items-center justify-center gap-2 hover:bg-[#E8501C]/5 transition-colors whitespace-nowrap">
+                 className="w-full sm:w-auto mt-2 sm:mt-0 h-10 px-6 border border-primary text-primary bg-transparent text-[10px] sm:text-xs font-semibold uppercase tracking-widest rounded-full flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors whitespace-nowrap">
                 Write a Review <Icon icon="solar:pen-new-square-linear" width="16"></Icon>
               </a>
             </div>
@@ -295,22 +295,22 @@ const Reviews = () => {
             <div
                 className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 sm:px-8 py-5 sm:py-6 bg-white border border-gray-200 rounded-3xl md:rounded-full shadow-sm w-full lg:w-auto">
               <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 w-full sm:w-auto">
-                <div className="flex items-center gap-2 text-[#4285F4]">
+                <div className="flex items-center gap-2 text-accent-blue">
                   <Icon icon="simple-icons:google" height="28" className="sm:h-8"></Icon>
-                  <span className="font-bold text-lg sm:text-xl text-[#0A0A0A] tracking-tight">Google</span>
+                  <span className="font-bold text-lg sm:text-xl text-dark tracking-tight">Google</span>
                 </div>
                 <div className="w-px h-10 bg-gray-200 hidden sm:block"></div>
                 <div className="flex flex-col items-center sm:items-start">
-                  <div className="flex items-center gap-1 text-[#FBBC05]">
+                  <div className="flex items-center gap-1 text-accent-yellow">
                     {[1, 2, 3, 4, 5].map((star) => (
                         <Icon key={star} icon="solar:star-bold" width="16" className="sm:w-5"></Icon>
                     ))}
                   </div>
-                  <span className="text-xs sm:text-sm font-bold text-[#0A0A0A] mt-0.5">5.0 Excellent</span>
+                  <span className="text-xs sm:text-sm font-bold text-dark mt-0.5">5.0 Excellent</span>
                 </div>
               </div>
               <a href="#" target="_blank" rel="noopener noreferrer"
-                 className="w-full sm:w-auto mt-2 sm:mt-0 h-10 px-6 border border-[#E8501C] text-[#E8501C] bg-transparent text-[10px] sm:text-xs font-semibold uppercase tracking-widest rounded-full flex items-center justify-center gap-2 hover:bg-[#E8501C]/5 transition-colors whitespace-nowrap">
+                 className="w-full sm:w-auto mt-2 sm:mt-0 h-10 px-6 border border-primary text-primary bg-transparent text-[10px] sm:text-xs font-semibold uppercase tracking-widest rounded-full flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors whitespace-nowrap">
                 Write a Review <Icon icon="solar:pen-new-square-linear" width="16"></Icon>
               </a>
             </div>

@@ -33,20 +33,20 @@ const Faq = () => {
 
   return (
       <section
-          className="py-16 md:py-32 border-y bg-[#FBF9F6] border-[#EBE5DF] shadow-[inset_0_1px_0_0_#FFFFFF,inset_0_-1px_0_0_#FFFFFF]"
+          className="py-16 md:py-32 border-y bg-light border-border-light shadow-[inset_0_1px_0_0_#FFFFFF,inset_0_-1px_0_0_#FFFFFF]"
           id="faq">
         <div className="w-full max-w-360 mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* FAQ Accordion */}
             <div>
-              <div className="reveal-up text-[#E8501C] font-semibold text-xs tracking-[0.2em] uppercase mb-4">
+              <div className="reveal-up text-primary font-semibold text-xs tracking-widest-extra uppercase mb-4">
                 Good to know
               </div>
-              <h2 className="reveal-up text-3xl sm:text-4xl md:text-5xl font-semibold text-[#6B1524] tracking-tight">
+              <h2 className="reveal-up text-3xl sm:text-4xl md:text-5xl font-semibold text-secondary tracking-tight">
                 Frequently Asked Questions
               </h2>
               <div
-                  className="reveal-up w-20 sm:w-24 h-0.5 bg-linear-to-r from-[#E8501C] to-transparent mt-6 mb-8 md:mb-10 rounded-full"></div>
+                  className="reveal-up w-20 sm:w-24 h-0.5 bg-linear-to-r from-primary to-transparent mt-6 mb-8 md:mb-10 rounded-full"></div>
 
               <div className="flex flex-col reveal-up">
                 {faqData.map((faq, index) => {
@@ -58,14 +58,14 @@ const Faq = () => {
                             onClick={() => toggleFaq(index)}
                         >
                       <span
-                          className="text-base md:text-lg font-semibold text-[#0A0A0A] group-hover:text-[#E8501C] transition-colors pr-4">
+                          className="text-base md:text-lg font-semibold text-dark group-hover:text-primary transition-colors pr-4">
                         {faq.question}
                       </span>
                           <Icon
                               icon="solar:alt-arrow-down-linear"
                               width="24"
                               height="24"
-                              className={`text-[#E8501C] transform transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                              className={`text-primary transform transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
                           ></Icon>
                         </button>
                         <div className={`faq-content ${isOpen ? 'open' : ''}`}>
@@ -83,7 +83,7 @@ const Faq = () => {
 
             {/* Banner */}
             <div
-                className="reveal-up relative w-full h-full min-h-75 md:min-h-100 rounded-4xl md:rounded-[2.5rem] overflow-hidden bg-[#0A0A0A] shadow-2xl mt-4 lg:mt-0 group">
+                className="reveal-up relative w-full h-full min-h-75 md:min-h-100 rounded-4xl md:rounded-[2.5rem] overflow-hidden bg-dark shadow-2xl mt-4 lg:mt-0 group">
               <Image
                   src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1000&auto=format&fit=crop"
                   alt="Prague details"
@@ -100,7 +100,7 @@ const Faq = () => {
                   Explore More.<br/>Ask Anything.
                 </h3>
                 <Link href="#contact"
-                   className="inline-flex items-center gap-2 text-white font-semibold text-[10px] md:text-sm uppercase tracking-widest hover:text-[#E8501C] transition-colors mt-2">
+                   className="inline-flex items-center gap-2 text-white font-semibold text-[10px] md:text-sm uppercase tracking-widest hover:text-primary transition-colors mt-2">
                   Contact our team <Icon icon="solar:arrow-right-linear" width="20"></Icon>
                 </Link>
               </div>

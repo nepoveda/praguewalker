@@ -30,11 +30,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-4">
                 <Link href="#"
-                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#E8501C] hover:bg-[#E8501C] hover:text-white transition-all shadow-sm">
+                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
                   <Icon icon="ri:instagram-line" width="18"></Icon>
                 </Link>
                 <Link href="#"
-                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#E8501C] hover:bg-[#E8501C] hover:text-white transition-all shadow-sm">
+                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
                   <Icon icon="ri:facebook-fill" width="18"></Icon>
                 </Link>
               </div>
@@ -45,29 +45,29 @@ const Footer = () => {
               <h4 className="text-white text-xs md:text-sm font-semibold tracking-wide mb-4 md:mb-6 uppercase">Explore</h4>
               <nav className="flex flex-col gap-3 md:gap-4">
                 <Link href="#"
-                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-[#E8501C] transition-colors w-fit">
+                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-primary transition-colors w-fit">
                   <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E8501C] group-hover:scale-125 transition-transform"></span> Home
+                      className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform"></span> Home
                 </Link>
                 <Link href="#about"
-                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-[#E8501C] transition-colors w-fit">
+                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-primary transition-colors w-fit">
                   <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E8501C] group-hover:scale-125 transition-transform"></span> About
+                      className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform"></span> About
                 </Link>
                 <Link href="#tours"
-                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-[#E8501C] transition-colors w-fit">
+                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-primary transition-colors w-fit">
                   <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E8501C] group-hover:scale-125 transition-transform"></span> Tours
+                      className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform"></span> Tours
                 </Link>
                 <Link href="#faq"
-                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-[#E8501C] transition-colors w-fit">
+                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-primary transition-colors w-fit">
                   <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E8501C] group-hover:scale-125 transition-transform"></span> FAQ
+                      className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform"></span> FAQ
                 </Link>
                 <Link href="#contact"
-                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-[#E8501C] transition-colors w-fit">
+                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-primary transition-colors w-fit">
                   <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E8501C] group-hover:scale-125 transition-transform"></span> Contact
+                      className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform"></span> Contact
                 </Link>
               </nav>
             </div>
@@ -77,20 +77,20 @@ const Footer = () => {
               <h4 className="text-white text-xs md:text-sm font-semibold tracking-wide mb-4 md:mb-6 uppercase">Legal</h4>
               <nav className="flex flex-col gap-3 md:gap-4">
                 <Link href="#"
-                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-[#E8501C] transition-colors w-fit">
+                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-primary transition-colors w-fit">
                   <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E8501C] group-hover:scale-125 transition-transform"></span> Terms &amp; Conditions
+                      className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform"></span> Terms &amp; Conditions
                 </Link>
                 <Link href="#"
-                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-[#E8501C] transition-colors w-fit">
+                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-primary transition-colors w-fit">
                   <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E8501C] group-hover:scale-125 transition-transform"></span> Privacy
+                      className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform"></span> Privacy
                   Policy
                 </Link>
                 <Link href="#"
-                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-[#E8501C] transition-colors w-fit">
+                   className="group flex items-center gap-3 text-sm text-white/50 hover:text-primary transition-colors w-fit">
                   <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E8501C] group-hover:scale-125 transition-transform"></span> Cancellation
+                      className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform"></span> Cancellation
                   Policy
                 </Link>
               </nav>

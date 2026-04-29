@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <>
       {/* 1. HEADER & TOP BAR */}
-      <div className="hidden md:flex h-10 w-full bg-[#6B1524] items-center justify-center relative z-50">
+      <div className="hidden md:flex h-10 w-full bg-secondary items-center justify-center relative z-50">
         <div className="w-full max-w-360 mx-auto px-6 flex items-center justify-between">
           <span
             className="uppercase text-xs font-normal text-white tracking-widest opacity-90 cursor-pointer"
@@ -52,23 +52,23 @@ const Header = () => {
             />
           </Link>
           <nav className="hidden lg:flex items-center gap-6">
-            <Link href="#" className="text-sm font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">Home</Link>
+            <Link href="#" className="text-sm font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">Home</Link>
             <div className="w-1 h-1 rounded-full bg-gray-200"></div>
-            <Link href="#about" className="text-sm font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">About</Link>
+            <Link href="#about" className="text-sm font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">About</Link>
             <div className="w-1 h-1 rounded-full bg-gray-200"></div>
-            <Link href="#tours" className="text-sm font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">Tours</Link>
+            <Link href="#tours" className="text-sm font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">Tours</Link>
             <div className="w-1 h-1 rounded-full bg-gray-200"></div>
-            <Link href="#faq" className="text-sm font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">FAQ</Link>
+            <Link href="#faq" className="text-sm font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">FAQ</Link>
             <div className="w-1 h-1 rounded-full bg-gray-200"></div>
-            <Link href="#contact" className="text-sm font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">Contact</Link>
+            <Link href="#contact" className="text-sm font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">Contact</Link>
           </nav>
           <div className="hidden lg:flex items-center gap-8">
-            <Link href="#contact" className="h-10 px-8 bg-[#E8501C] text-white text-xs font-semibold uppercase tracking-widest rounded-full flex items-center justify-center gap-2 hover:bg-[#c94315] transition-colors shadow-lg shadow-[#E8501C]/20 hover:shadow-[#E8501C]/40">
+            <Link href="#contact" className="h-10 px-8 bg-primary text-white text-xs font-semibold uppercase tracking-widest rounded-full flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20 hover:shadow-primary/40">
               Book a Tour <Icon icon="solar:arrow-right-linear" width="16"></Icon>
             </Link>
           </div>
 
-          <button onClick={toggleMenu} className="lg:hidden text-[#0A0A0A] p-2 -mr-2 focus:outline-none">
+          <button onClick={toggleMenu} className="lg:hidden text-dark p-2 -mr-2 focus:outline-none">
             <Icon icon="solar:hamburger-menu-linear" width="32" height="32" className="stroke-[1.5]"></Icon>
           </button>
         </div>
@@ -89,25 +89,25 @@ const Header = () => {
             height={150}
             className="h-13.75 w-auto"
           />
-          <button onClick={closeMenu} className="text-[#0A0A0A] p-2 -mr-2 focus:outline-none hover:text-[#E8501C] transition-colors">
+          <button onClick={closeMenu} className="text-dark p-2 -mr-2 focus:outline-none hover:text-primary transition-colors">
             <Icon icon="solar:close-circle-linear" width="32" height="32" className="stroke-[1.5]"></Icon>
           </button>
         </div>
         <nav className="flex flex-col items-center justify-center grow gap-8 px-6 pb-20">
-          <Link href="#" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">Home</Link>
-          <Link href="#about" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">About</Link>
-          <Link href="#tours" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">Tours</Link>
-          <Link href="#faq" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">FAQ</Link>
-          <Link href="#contact" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-[#0A0A0A] hover:text-[#E8501C] transition-colors">Contact</Link>
+          <Link href="#" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">Home</Link>
+          <Link href="#about" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">About</Link>
+          <Link href="#tours" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">Tours</Link>
+          <Link href="#faq" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">FAQ</Link>
+          <Link href="#contact" onClick={closeMenu} className="text-xl font-semibold uppercase tracking-widest text-dark hover:text-primary transition-colors">Contact</Link>
 
-          <div className="w-12 h-0.5 bg-linear-to-r from-transparent via-[#E8501C] to-transparent my-2 rounded-full"></div>
+          <div className="w-12 h-0.5 bg-linear-to-r from-transparent via-primary to-transparent my-2 rounded-full"></div>
 
           <div className="flex flex-col items-center gap-2">
             <span className="text-[10px] uppercase font-semibold text-gray-400 tracking-widest">Call or WhatsApp</span>
-            <a href="tel:+420603181300" className="text-xl font-semibold text-[#0A0A0A] hover:text-[#E8501C] transition-colors">+420 603 181 300</a>
+            <a href="tel:+420603181300" className="text-xl font-semibold text-dark hover:text-primary transition-colors">+420 603 181 300</a>
           </div>
 
-          <Link href="#contact" onClick={closeMenu} className="mt-4 h-14 px-10 bg-[#E8501C] text-white text-sm font-semibold uppercase tracking-widest rounded-full flex items-center justify-center gap-2 hover:bg-[#c94315] shadow-lg shadow-[#E8501C]/30 w-full max-w-xs transition-colors">
+          <Link href="#contact" onClick={closeMenu} className="mt-4 h-14 px-10 bg-primary text-white text-sm font-semibold uppercase tracking-widest rounded-full flex items-center justify-center gap-2 hover:bg-primary-dark shadow-lg shadow-primary/30 w-full max-w-xs transition-colors">
             Book a Tour <Icon icon="solar:arrow-right-linear" width="18"></Icon>
           </Link>
         </nav>

@@ -39,21 +39,21 @@ const Hero = () => {
         </div>
 
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-[#0A0A0A]/90"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-dark/90"></div>
         <div
-            className="bg-linear-to-tr from-[#0A0A0A]/50 via-transparent to-[#0A0A0A]/10 absolute top-0 right-0 bottom-0 left-0"></div>
+            className="bg-linear-to-tr from-dark/50 via-transparent to-dark/10 absolute top-0 right-0 bottom-0 left-0"></div>
 
         <div className="relative z-10 w-full max-w-360 mx-auto px-6 text-center flex flex-col items-center">
           <div
               className="reveal-up inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-2.5 rounded-full bg-black/40 border border-white/10 backdrop-blur-md shadow-2xl mb-6 sm:mb-8">
           <span
-              className="uppercase text-[10px] sm:text-xs sm:tracking-[0.3em] font-light text-slate-50 tracking-[0.2em]">
+              className="uppercase text-[10px] sm:text-xs sm:tracking-widest-extreme font-light text-slate-50 tracking-widest-extra">
             Private &amp; Customized Walking Tours
           </span>
           </div>
           <h1 className="reveal-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight max-w-4xl mx-auto drop-shadow-[0_4px_16px_rgba(0,0,0,0.4)] leading-[1.15]">
             Prague isn&apos;t a destination.<br/>
-            <span className="italic bg-linear-to-r from-[#FFB394] to-[#E8501C] bg-clip-text text-transparent">It&apos;s an invitation.</span>
+            <span className="italic bg-linear-to-r from-[#FFB394] to-primary bg-clip-text text-transparent">It&apos;s an invitation.</span>
           </h1>
           <p className="reveal-up text-base sm:text-lg md:text-xl font-normal text-white/90 max-w-2xl mx-auto mt-6 sm:mt-8 drop-shadow-md leading-relaxed">
             Experience the city&apos;s timeless beauty through private, expert-led tours designed for the curious
@@ -63,7 +63,7 @@ const Hero = () => {
           <div
               className="reveal-up flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-10 sm:mt-12 w-full sm:w-auto">
             <Link href="#tours"
-                  className="w-full sm:w-auto h-14 px-8 sm:px-10 bg-[#E8501C] text-white text-sm font-semibold rounded-full flex items-center justify-center gap-2 hover:bg-[#c94315] transition-colors shadow-lg shadow-[#E8501C]/30 hover:shadow-[#E8501C]/50">
+                  className="w-full sm:w-auto h-14 px-8 sm:px-10 bg-primary text-white text-sm font-semibold rounded-full flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30 hover:shadow-primary/50">
               View Our Signature Tours <Icon icon="solar:arrow-right-linear" width="18"></Icon>
             </Link>
             <Link href="#contact"

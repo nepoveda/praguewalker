@@ -24,7 +24,7 @@ export default function RootLayout({
           lang="en"
       >
       <body
-          className="antialiased scroll-smooth selection:bg-[#E8501C] selection:text-white">{children}</body>
+          className="antialiased scroll-smooth selection:bg-primary selection:text-white">{children}</body>
       </html>
   );
 }

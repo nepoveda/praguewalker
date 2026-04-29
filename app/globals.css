@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #E8501C;
+  --color-primary-dark: #c94315;
+  --color-secondary: #6B1524;
+  --color-dark: #0A0A0A;
+  --color-light: #FBF9F6;
+  --color-light-orange: #FFF5F0;
+  --color-light-beige: #FFF1E6;
+  --color-light-beige-dark: #FFE4D6;
+  --color-accent-green: #34E0A1;
+  --color-accent-blue: #4285F4;
+  --color-accent-yellow: #FBBC05;
+  --color-border-light: #EBE5DF;
+  --color-border-lighter: #F2EAE1;
+  --color-border-orange-light: #FFEAE0;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --spacing-13_75: 3.4375rem;
+  --spacing-17_5: 4.375rem;
+  --spacing-26_5: 6.625rem;
+  --spacing-75: 18.75rem;
+  --spacing-95: 23.75rem;
+  --spacing-100: 25rem;
+  --spacing-105: 26.25rem;
+  --spacing-150: 37.5rem;
+  --spacing-200: 50rem;
+  
+  --max-width-360: 90rem;
+
+  --tracking-widest-extra: 0.2em;
+  --tracking-widest-extreme: 0.3em;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #FFFFFF;
