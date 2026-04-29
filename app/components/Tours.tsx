@@ -95,7 +95,7 @@ const Tours = () => {
               </div>
               <Link href="#tours"
                  className="h-12 w-full bg-[#E8501C] text-white text-sm font-semibold rounded-full flex items-center justify-center gap-2 hover:bg-[#c94315] transition-colors mt-auto shadow-lg shadow-[#E8501C]/20 hover:shadow-[#E8501C]/40">
-                Explore Tour <iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon>
+                Explore Tour <Icon icon="solar:arrow-right-linear" width="18"></Icon>
               </Link>
             </div>
 
