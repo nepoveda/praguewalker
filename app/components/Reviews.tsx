@@ -229,7 +229,7 @@ const Reviews = () => {
           <div className="reveal-up w-full pt-4 pb-4 relative">
             {/* Navigation Arrows */}
             <button
-                name="previous"
+                aria-label="previous reviews"
                 onClick={() => scrollByAmount('prev')}
                 onMouseEnter={() => setIsAutoScrolling(false)}
                 onMouseLeave={() => setIsAutoScrolling(true)}
@@ -238,7 +238,7 @@ const Reviews = () => {
               <Icon icon="solar:alt-arrow-left-linear" width="24"></Icon>
             </button>
             <button
-                name="next"
+                aria-label="next reviews"
                 onClick={() => scrollByAmount('next')}
                 onMouseEnter={() => setIsAutoScrolling(false)}
                 onMouseLeave={() => setIsAutoScrolling(true)}

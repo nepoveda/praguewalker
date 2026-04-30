@@ -89,7 +89,7 @@ const Header = () => {
             height={150}
             className="h-13.75 w-auto"
           />
-          <button onClick={closeMenu} name="close menu" className="text-dark p-2 -mr-2 focus:outline-none hover:text-primary transition-colors">
+          <button onClick={closeMenu} aria-label="close menu" className="text-dark p-2 -mr-2 focus:outline-none hover:text-primary transition-colors">
             <Icon icon="solar:close-circle-linear" width="32" height="32" className="stroke-[1.5]"></Icon>
           </button>
         </div>
