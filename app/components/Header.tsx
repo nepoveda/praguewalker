@@ -68,7 +68,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <button onClick={toggleMenu} name="toggle menu" className="lg:hidden text-dark p-2 -mr-2 focus:outline-none">
+          <button onClick={toggleMenu} aria-label="toggle menu" className="lg:hidden text-dark p-2 -mr-2 focus:outline-none">
             <Icon icon="solar:hamburger-menu-linear" width="32" height="32" className="stroke-[1.5]"></Icon>
           </button>
         </div>
