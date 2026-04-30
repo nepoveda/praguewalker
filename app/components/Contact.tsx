@@ -5,7 +5,20 @@ import {Icon} from "@iconify/react";
 import Link from "next/link";
 import {CONTACT_EMAIL, CONTACT_NUMBER} from "@/app/constants";
 
+
 const Contact = () => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const emailMessage = `
+      This is simulation of sending contact form message.
+      Here are some data: Name ${formData.get("name")} email address ${formData.get("email")}.
+      For date ${formData.get("date")} with guest: ${formData.get("guests")}
+      and message sent: ${formData.get("message")}
+    `
+    alert("Message sent: " + emailMessage);
+  };
   return (
       <section className="md:py-32 overflow-hidden bg-dark pt-16 pb-16 relative" id="contact">
         {/* Decorative Ambient Blurs */}
@@ -71,7 +84,7 @@ const Contact = () => {
 
                 {/* Secondary Ghost Button */}
                 <Link href="#contact"
-                   className="mt-4 inline-flex items-center justify-center gap-2 h-12 md:h-14 px-6 md:px-8 bg-transparent text-white border border-white/30 text-sm font-semibold rounded-full hover:bg-white/10 hover:border-white/50 transition-all w-full sm:w-fit backdrop-blur-sm">
+                      className="mt-4 inline-flex items-center justify-center gap-2 h-12 md:h-14 px-6 md:px-8 bg-transparent text-white border border-white/30 text-sm font-semibold rounded-full hover:bg-white/10 hover:border-white/50 transition-all w-full sm:w-fit backdrop-blur-sm">
                   Contact Us for Customized Request →
                 </Link>
               </div>
@@ -85,20 +98,20 @@ const Contact = () => {
               <h3 className="md:text-2xl md:mb-8 text-xl font-semibold text-secondary tracking-tight mb-6">Request
                 an Itinerary</h3>
 
-              <form className="flex flex-col gap-4 md:gap-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col gap-4 md:gap-5" onSubmit={sendEmail}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                   <div className="flex flex-col">
                     <label
                         className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2"
                         htmlFor="name">Full Name</label>
-                    <input type="text" id="name" placeholder="E.g. John Doe"
+                    <input type="text" id="name" name="name" placeholder="E.g. John Doe" required
                            className="w-full h-12 px-4 rounded-xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-dark text-sm placeholder-gray-400"/>
                   </div>
                   <div className="flex flex-col">
                     <label
                         className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2"
                         htmlFor="email">Email Address</label>
-                    <input type="email" id="email" placeholder="john@example.com"
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required
                            className="w-full h-12 px-4 rounded-xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-dark text-sm placeholder-gray-400"/>
                   </div>
                 </div>
@@ -107,14 +120,14 @@ const Contact = () => {
                     <label
                         className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2"
                         htmlFor="date">Preferred Date</label>
-                    <input type="date" id="date"
+                    <input type="date" id="date" name="date" required
                            className="w-full h-12 px-4 rounded-xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm text-dark"/>
                   </div>
                   <div className="flex flex-col">
                     <label
                         className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2"
                         htmlFor="guests">Party Size</label>
-                    <select id="guests"
+                    <select id="guests" name="guests"
                             className="w-full h-12 px-4 rounded-xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm text-dark appearance-none cursor-pointer">
                       <option>1-2 Guests</option>
                       <option>3-4 Guests</option>
@@ -127,14 +140,14 @@ const Contact = () => {
                   <label
                       className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-2"
                       htmlFor="message">Your Interests</label>
-                  <textarea id="message" rows={4}
+                  <textarea id="message" name="message" rows={4} required
                             placeholder="Tell us what you'd love to see (e.g., Jewish Quarter, Architecture, Food, specific pace)..."
                             className="w-full p-4 rounded-xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm text-dark placeholder-gray-400 resize-none"></textarea>
                 </div>
                 <button type="submit"
                         className="h-12 md:h-14 w-full bg-primary text-white text-xs font-semibold rounded-xl flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors mt-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 uppercase tracking-widest">
                   Book Your Private Tour <Icon icon="solar:plain-2-linear"
-                                                       width="18"></Icon>
+                                               width="18"></Icon>
                 </button>
                 <p className="text-[10px] text-center text-gray-400 mt-1 uppercase tracking-wider">No
                   commitment required. 100% private.</p>
