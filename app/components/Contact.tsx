@@ -3,6 +3,7 @@ import React from 'react';
 import Image from "next/image";
 import {Icon} from "@iconify/react";
 import Link from "next/link";
+import {CONTACT_EMAIL, CONTACT_NUMBER} from "@/app/constants";
 
 const Contact = () => {
   return (
@@ -50,8 +51,8 @@ const Contact = () => {
                   <div>
                                     <span
                                         className="block text-[10px] font-semibold text-white/40 uppercase tracking-widest mb-1">Email Us Directly</span>
-                    <a href="mailto:experiences@praguewalker.com"
-                       className="hover:text-primary transition-colors text-sm sm:text-base font-medium">experiences@praguewalker.com</a>
+                    <a href={`mailto:${CONTACT_EMAIL}`}
+                       className="hover:text-primary transition-colors text-sm sm:text-base font-medium">{CONTACT_EMAIL}</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 group cursor-pointer">
@@ -63,9 +64,8 @@ const Contact = () => {
                   <div>
                                     <span
                                         className="block text-[10px] font-semibold text-white/40 uppercase tracking-widest mb-1">Call or WhatsApp</span>
-                    <a href="tel:+420603181300"
-                       className="text-sm sm:text-base font-medium hover:text-primary transition-colors">+420
-                      603 181 300</a>
+                    <a href={`tel:${CONTACT_NUMBER}`}
+                       className="text-sm sm:text-base font-medium hover:text-primary transition-colors">{CONTACT_NUMBER}</a>
                   </div>
                 </div>
 
