@@ -34,6 +34,10 @@
   --tracking-widest-extreme: 0.3em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #FFFFFF;
