@@ -1,30 +1,31 @@
-import type {Metadata, Viewport} from "next";
-import "./globals.css";
+import './globals.css';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Prague Walker | Premium Private Tours",
-  description: "",
-  icons: {
-    icon: "/vite.svg",
+  title: 'Prague Walker',
+  description: 'Explore Prague with our guided tours.',
+  openGraph: {
+    title: 'Prague Walker',
+    description: 'Explore Prague with our guided tours.',
+    url: 'https://praguewalker.example.com',
+    siteName: 'Prague Walker',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Prague Walker logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
 };
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
-
-export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-      <html
-          lang="en"
-      >
-      <body
-          className="antialiased scroll-smooth selection:bg-primary selection:text-white">{children}</body>
-      </html>
+    <html lang="en">
+      <body className="">{children}</body>
+    </html>
   );
 }

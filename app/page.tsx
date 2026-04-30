@@ -8,20 +8,29 @@ import Reviews from "@/app/components/Reviews";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 
+import Head from 'next/head';
+
 export default function Home() {
   return (
-      <>
-        <Header />
-        <main>
-          <Hero />
-          <Philosophy />
-          <Usps />
-          <Tours />
-          <Faq />
-          <Reviews />
-          <Contact />
-        </main>
-        <Footer />
-      </>
+    <> 
+      <Head>
+        <title>Prague Walker</title>
+        <meta property="og:title" content="Prague Walker" />
+        <meta property="og:description" content="Explore Prague with our guided tours." />
+        <meta property="og:image" content="/images/og-image.jpg" />
+        <meta property="og:url" content="https://praguewalker.example.com" />
+      </Head>
+      <Header />
+      <main>
+        <Hero />
+        <Philosophy />
+        <Usps />
+        <Tours />
+        <Faq />
+        <Reviews />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
