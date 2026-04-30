@@ -54,6 +54,7 @@ const Faq = () => {
                   return (
                       <div key={index} className="border-b border-gray-200">
                         <button
+                            name="FAQ toggle"
                             className="w-full py-5 md:py-6 text-left flex justify-between items-center bg-transparent group"
                             onClick={() => toggleFaq(index)}
                         >

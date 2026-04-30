@@ -68,7 +68,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <button onClick={toggleMenu} className="lg:hidden text-dark p-2 -mr-2 focus:outline-none">
+          <button onClick={toggleMenu} name="toggle menu" className="lg:hidden text-dark p-2 -mr-2 focus:outline-none">
             <Icon icon="solar:hamburger-menu-linear" width="32" height="32" className="stroke-[1.5]"></Icon>
           </button>
         </div>
@@ -89,7 +89,7 @@ const Header = () => {
             height={150}
             className="h-13.75 w-auto"
           />
-          <button onClick={closeMenu} className="text-dark p-2 -mr-2 focus:outline-none hover:text-primary transition-colors">
+          <button onClick={closeMenu} name="close menu" className="text-dark p-2 -mr-2 focus:outline-none hover:text-primary transition-colors">
             <Icon icon="solar:close-circle-linear" width="32" height="32" className="stroke-[1.5]"></Icon>
           </button>
         </div>

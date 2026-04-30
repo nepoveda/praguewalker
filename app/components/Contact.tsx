@@ -144,7 +144,7 @@ const Contact = () => {
                             placeholder="Tell us what you'd love to see (e.g., Jewish Quarter, Architecture, Food, specific pace)..."
                             className="w-full p-4 rounded-xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm text-dark placeholder-gray-400 resize-none"></textarea>
                 </div>
-                <button type="submit"
+                <button type="submit" name="submit"
                         className="h-12 md:h-14 w-full bg-primary text-white text-xs font-semibold rounded-xl flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors mt-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 uppercase tracking-widest">
                   Book Your Private Tour <Icon icon="solar:plain-2-linear"
                                                width="18"></Icon>
