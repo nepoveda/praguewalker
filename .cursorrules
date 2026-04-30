@@ -1,0 +1,20 @@
+# PragueWalker Project Development Rules
+
+## 🎯 Project Overview
+*   **Purpose:** This project is a website for "Prague Walker," a company offering walking tours and experiences in Prague.
+*   **Target Audience:** International tourists (All content must be written in **English**).
+*   **Technology Stack:** Next.js 15 (App Router), TypeScript, Tailwind CSS.
+
+## 📂 Code Structure & Conventions
+*   **Constants/Data:** All global data, contact details, and pricing information are centralized in `app/constants.ts`. *Do not hardcode these values.*
+*   **Components:** Components should reside in the `app/components/` directory, with each component in its own dedicated file (e.g., `HeroSection.tsx`).
+*   **Styling Tokens:** All design tokens (colors, spacing, fonts) are defined and managed within `tailwind.config.ts`. Use these variables exclusively for consistency.
+
+## 🖼️ Best Practices & Constraints
+1.  **Image Handling:** Always use the `<Image />` component from `next/image`. **Never** use standard HTML `<img>` tags.
+2.  **Responsiveness:** All layout modifications must adhere to a **mobile-first** approach, ensuring optimal viewing experience on small screens before scaling up for larger devices.
+3.  **Language:** The entire user-facing content (text, labels, descriptions) must be in **English**.
+
+## 🛠️ Development Workflow
+*   Always run `npm run dev` or `yarn dev` to test changes locally.
+*   When modifying code, ensure that the functionality remains robust and passes all existing tests.

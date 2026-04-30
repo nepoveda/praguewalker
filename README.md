@@ -1,8 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prague Walker 🚶‍♂️✨
 
-## Getting Started
+A modern web experience built with Next.js, designed to showcase immersive storytelling and interactive content for Prague's history and culture.
 
-First, run the development server:
+This project utilizes the App Router architecture, Tailwind CSS for styling, and is configured for **standalone deployment** for optimal performance and minimal footprint in production environments.
+
+## 🚀 Getting Started
+
+Follow these steps to get a local copy of the project running on your machine.
+
+### Prerequisites
+
+*   Node.js (v18+)
+*   npm or yarn or pnpm
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone [repository-url]
+    cd praguewalker
+    ```
+2.  Install dependencies:
+    ```bash
+    # Using npm
+    npm install
+    # OR using yarn
+    yarn install
+    # OR using pnpm
+    pnpm install
+    ```
+
+### Running Locally (Development)
+
+Start the development server to see the live result. The page will auto-update as you edit files.
 
 ```bash
 npm run dev
@@ -10,27 +40,47 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Build and Deployment (Production)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Since this project is configured for `output: "standalone"`, the deployment process requires specific steps to ensure all necessary server files are included.
 
-## Learn More
+### 1. Building the Project
 
-To learn more about Next.js, take a look at the following resources:
+Run the build command to generate optimized, production-ready assets. This creates the standalone directory structure in `.next/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
+
+### 2. Running Standalone Server
+
+To serve the application in a production environment (like a Docker container or a dedicated server), execute the generated server file:
+
+```bash
+node .next/standalone/server.js
+```
+
+## ✨ Features & Technologies
+
+*   **Next.js App Router:** Modern React framework for building scalable web applications.
+*   **Tailwind CSS:** Utility-first CSS framework for rapid styling and design consistency.
+*   **Standalone Output:** Optimized build process resulting in a minimal, self-contained deployment package.
+*   **Dynamic Components:** Utilizes advanced animation techniques (e.g., `reveal-up`, hero slideshow) for an engaging user experience.
+
+## 📚 Learn More
+
+To learn more about Next.js and best practices:
+
+*   [Next.js Documentation](https://nextjs.org/docs) - Comprehensive guide on features and API.
+*   [Learn Next.js](https://nextjs.org/learn) - An interactive tutorial for beginners.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
