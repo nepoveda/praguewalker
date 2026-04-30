@@ -30,10 +30,12 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-4">
                 <Link href="#"
+                      aria-label="instagram"
                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
                   <Icon icon="ri:instagram-line" width="18"></Icon>
                 </Link>
                 <Link href="#"
+                      aria-label="facebook"
                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
                   <Icon icon="ri:facebook-fill" width="18"></Icon>
                 </Link>
